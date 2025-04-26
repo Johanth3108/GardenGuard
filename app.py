@@ -11,7 +11,7 @@ import pandas as pd
 app = Flask(__name__)
 
 GEMINI_CSV_FILE = "gemini_data.csv"
-GEMINI_API_KEY = "AIzaSyBoZJep3hdGb7hv7V79ByaJQdMAzJmWp9Q"
+GEMINI_API_KEY = "your_API_key"
 CSV_FILE = "data.csv"
 HEALTH_CSV_FILE = 'health.csv'
 BLE_DEVICE_NAME = "PlantSensor"
