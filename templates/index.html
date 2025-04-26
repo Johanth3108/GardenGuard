@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>🌱 Your Garden</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-"></span>
+          <div id="clock">
+            <h1 id="date-time"></h1>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <a href="http://143.167.23.96:5000" style="color: #9799ab; text-decoration: none;"><span class="material-icons-outlined">local_florist</span> HomeGarden</a> 
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item sidebar-highlight">
+            <a href="http://143.167.23.96:5000" >
+              <span class="material-icons-outlined">spa</span> Health
+            </a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="http://143.167.23.96:5000/reports" >
+              <span class="material-icons-outlined">poll</span> Reports
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">DASHBOARD</p>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Temperature</p>
+              <span class="material-icons-outlined text-blue">thermostat</span>
+            </div>
+            <span class="text-primary font-weight-bold" id="temp">24</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Humidity</p>
+              <span class="material-icons-outlined text-orange">water_drop</span>
+            </div>
+            <span class="text-primary font-weight-bold" id="humid">83</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Avg. Soil Moisture</p>
+              <span class="material-icons-outlined text-green">eco</span>
+            </div>
+            <span class="text-primary font-weight-bold" id="moist">50</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary">Soil pH</p>
+              <span class="material-icons-outlined text-red">nature</span>
+            </div>
+            <span class="text-primary font-weight-bold" id="soilph">56</span>
+          </div>
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">What your garden wants to say to you?</p>
+            <p class="text-primary" id="gardenwords" style="font-size: large; font-family: OCR A Std, monospace;"></p>
+            <button class="button-85" id="askgarden">Ask how's your garden!</button>
+            
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Overall Garden health</p>
+            <div id="radial"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <!-- <script src="js/scripts.js"></script> -->
+    <script src="/static/script.js"></script>
+  </body>
+</html>

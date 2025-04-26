@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>🌱 Your Garden</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <span class="material-icons-"></span>
+          <div id="clock">
+            <h1 id="date-time"></h1>
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">local_florist</span> HomeGarden
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="http://143.167.23.96:5000">
+              <span class="material-icons-outlined">spa</span> Health
+            </a>
+          </li>
+          <li class="sidebar-list-item sidebar-highlight">
+            <a href="http://143.167.23.96:5000/reports">
+              <span class="material-icons-outlined">poll</span> Reports
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+
+      <!-- Main -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="font-weight-bold">Garden Reports</p>
+        </div>
+
+        
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Humidity</p>
+            <div id="humidity-bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Temperature</p>
+            <div id="temperature-bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Soil Moisture</p>
+            <div id="moisture-bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Soil pH</p>
+            <div id="ph-bar-chart"></div>
+          </div>
+
+        </div>
+      </main>
+      <!-- End Main -->
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="/static/reports.js"></script>
+  </body>
+</html>
